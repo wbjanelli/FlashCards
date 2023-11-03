@@ -4,13 +4,13 @@ import NotFound from "./NotFound";
 
 function Layout() {
   return (
-    <React.fragment>
+    <React.Fragment>
       <Header />
       <div className="container">
         {/* TODO: Implement the screen starting here */}
         <NotFound />
       </div>
-    </React.fragment>
+    </React.Fragment>
   );
 }
 
