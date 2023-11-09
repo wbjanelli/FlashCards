@@ -1,11 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-function NotFound() {
+export default function NotFound() {
   return (
-    <div className="NotFound">
-      <h1>Not Found</h1>
+    <div>
+      <h2>Not Found</h2>
+      <p>Sorry, page not found.</p>
+      <Link to="/" className="btn btn-warning">
+        Return Home
+      </Link>
     </div>
   );
 }
-
-export default NotFound;
