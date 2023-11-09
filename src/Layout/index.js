@@ -1,5 +1,8 @@
+// Import React, Fragment, Route, and Switch components from React Router for routing
 import React, { Fragment } from "react";
 import { Route, Switch } from "react-router-dom";
+
+// Import components from the application
 import Header from "./Header";
 import NotFound from "./NotFound";
 import CreateDeck from "../Deck/CreateDeck";
@@ -10,36 +13,36 @@ import EditDeck from "../Deck/EditDeck";
 import EditCard from "../Cards/EditCard";
 import AddCard from "../Cards/AddCard";
 
+// Define the Layout component for structuring application routes and components
 function Layout() {
-
   return (
     <React.Fragment>
-      <Header />
+      <Header /> {/* Render the application header component */}
       <div className="container">
         <Switch>
           <Route exact path={"/"}>
-            <Home />
+            <Home /> {/* Route for the home page component */}
           </Route>
           <Route exact path={"/decks/new"}>
-            <CreateDeck />
+            <CreateDeck /> {/* Route for creating a new deck */}
           </Route>
           <Route exact path={"/decks/:deckId"}>
-            <ViewDeck />
+            <ViewDeck /> {/* Route for viewing a deck */}
           </Route>
           <Route exact path={"/decks/:deckId/edit"}>
-            <EditDeck />
+            <EditDeck /> {/* Route for editing a deck */}
           </Route>
           <Route exact path={"/decks/:deckId/study"}>
-            <Study />
+            <Study /> {/* Route for studying a deck */}
           </Route>
           <Route exact path={"/decks/:deckId/cards/new"}>
-            <AddCard />
+            <AddCard /> {/* Route for adding a card to a deck */}
           </Route>
           <Route exact path={"/decks/:deckId/cards/:cardId/edit"}>
-            <EditCard />
+            <EditCard /> {/* Route for editing a card */}
           </Route>
           <Route>
-            <NotFound />
+            <NotFound /> {/* Default route for a "Not Found" page */}
           </Route>
         </Switch>
       </div>
@@ -47,4 +50,4 @@ function Layout() {
   );
 }
 
-export default Layout;
+export default Layout; // Export the Layout component as the default export
